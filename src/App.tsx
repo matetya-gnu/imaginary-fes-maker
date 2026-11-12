@@ -1,3 +1,4 @@
+
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { redirectToSpotifyAuth, getAccessToken, fetchTopArtists } from './spotifyAuth';
 import html2canvas from 'html2canvas';
@@ -253,7 +254,7 @@ export const App: React.FC = () => {
       const canvas = await html2canvas(exportRef.current, {
         scale: 3,
         useCORS: true,
-        backgroundColor: currentTheme.page,
+        backgroundColor: '#08090c', // ⭕ 直接黒色を指定するように修正
         logging: false,
       });
       const link = document.createElement('a');
